@@ -45,3 +45,26 @@ html {
   font-family: var(--font-sans);
   scroll-behavior: smooth;
 }
+
+.hero-shell {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero-shell::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -3rem;
+  right: -20rem;
+  width: min(88rem, 125vw);
+  height: 76rem;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at 68% 38%,
+    rgba(231, 88, 75, 0.28) 0%,
+    rgba(231, 88, 75, 0.13) 34%,
+    rgba(231, 88, 75, 0.04) 62%,
+    rgba(231, 88, 75, 0) 82%
+  );
+}

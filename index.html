@@ -24,9 +24,12 @@
    class="bg-canvas text-charcoal min-h-screen flex flex-col justify-between selection:bg-terracotta selection:text-canvas">
 
    <!-- Sticky Header -->
-   <header class="border-b border-border-subtle sticky top-0 bg-canvas/75 backdrop-blur-md z-50">
+   <header class="border-b border-border-subtle sticky top-0 bg-canvas/25 backdrop-blur-sm z-50">
       <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-         <a href="/index.html" class="font-serif text-2xl tracking-tight">Komorebi</a>
+         <a href="/index.html" class="flex items-center gap-2 tracking-tight">
+            <span class="font-serif text-2xl">Komorebi</span>
+            <span class="font-sans text-xs font-normal mx-1 tracking-[0.12em] text-charcoal-muted">architecture</span>
+         </a>
 
          <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
             <a href="/about.html" class="hover:text-terracotta transition py-2 px-3">About</a>
@@ -42,45 +45,169 @@
    </header>
 
    <!-- Hero Section -->
-   <main class="max-w-7xl mx-auto px-6 py-15 flex-grow">
+   <main class="hero-shell max-w-7xl mx-auto px-6 py-15 flex-grow">
       <div class="max-w-4xl">
-         <span class="text-xs uppercase tracking-widest font-semibold text-charcoal-muted block mb-4">
-            Sustainable Architecture & Spatial Craft
-         </span>
-         <h1 class="font-serif text-8xl md:text-8xl lg:text-9x1 text-terracotta [1.05] tracking-tight mb-6">
+         <h1 class="font-serif font-semibold text-8xl md:text-8xl lg:text-9x1 text-terracotta [1.05] tracking-tight mb-6">
             Light
          </h1>
          <h2 class="font-serif text-3xl md:text-4xl lg:text-6xl leading-[1.05] tracking-tight mb-8 max-w-7xl" >
-            touches every room before we draw a single wall.
+            touches every room before we draw a single line.
          </h2>
-         <p class="text-charcoal-muted text-lg md:text-xl max-w-2xl leading-relaxed mb-10">
-            We create carbon-neutral residential and cultural environments balancing raw rammed earth, timber, and
-            high-performance engineering.
+         <p class="text-charcoal-muted text-lg md:text-xl max-w-xl leading-relaxed mb-10">
+            We create carbon-neutral spaces with sustainable materials and high-performance engineering.
          </p>
          <div class="flex items-center gap-4">
             <a href="/projects.html"
-               class="bg-charcoal text-canvas px-6 py-3.5 text-sm font-medium hover:bg-terracotta transition rounded-sm">
+               class="bg-charcoal text-canvas px-6 py-2.5 text-sm font-medium hover:bg-terracotta transition rounded-sm">
                View Projects
             </a>
             <a href="/about.html"
-               class="border border-border-subtle hover:border-charcoal px-6 py-3.5 text-sm font-medium transition rounded-sm">
+               class="border border-border-subtle hover:border-charcoal px-6 py-2.5 text-sm font-medium transition rounded-sm">
                Our Philosophy
             </a>
          </div>
       </div>
 
-      <!-- Featured Bento Box / Highlight -->
-      <div class="mt-20 border border-border-subtle p-8 md:p-12 bg-surface rounded-sm">
-         <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Featured Work</span>
-         <h2 class="font-serif text-3xl md:text-4xl mt-2 mb-3">The Pavilion at High Ridge</h2>
-         <p class="text-charcoal-muted max-w-xl text-sm leading-relaxed mb-6">
-            A low-impact timber and glass residence embedded directly into granite bedrock in the Pacific Northwest.
-         </p>
-         <a href="/projects.html"
-            class="text-xs uppercase tracking-widest font-semibold underline underline-offset-4 hover:text-terracotta transition">
-            Read the Case Study &rarr;
+      <!-- Featured Work -->
+      <article class="mt-20 border border-border-subtle bg-surface rounded-sm overflow-hidden md:grid md:grid-cols-5 drop-shadow-sm">
+         <a href="/projects.html" aria-label="View The Pavilion at High Ridge case study"
+            class="relative block min-h-72 md:col-span-3 md:min-h-full">
+            <img src="/src/images/Pavilion.jpeg" alt="The Pavilion at High Ridge nestled into a wooded hillside"
+               class="absolute inset-0 h-full w-full object-cover" />
+            <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-charcoal/45 to-transparent"></div>
+            <span class="absolute bottom-5 left-6 text-xs uppercase tracking-widest text-canvas font-semibold">
+               High Ridge / 2026
+            </span>
          </a>
-      </div>
+         <div class="flex flex-col justify-between p-7 md:col-span-2 md:p-10">
+            <div>
+               <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Featured Work</span>
+               <h2 class="font-serif text-3xl md:text-4xl leading-tight mt-3 mb-4">The Pavilion at High Ridge</h2>
+               <p class="text-charcoal-muted max-w-xl text-sm leading-relaxed">
+                  A low-impact pavilion shaped around a wooded hillside, where framed views and quiet transitions between inside and out make the landscape the central room.
+               </p>
+            </div>
+            <a href="/projects.html"
+               class="inline-flex items-center gap-3 self-start mt-8 text-xs uppercase tracking-widest font-semibold group">
+               <span class="border-b border-charcoal pb-1 group-hover:border-terracotta group-hover:text-terracotta transition">Read the Case Study</span>
+               <span aria-hidden="true" class="text-lg leading-none group-hover:text-terracotta transition">&rarr;</span>
+            </a>
+         </div>
+      </article>
+
+      <!-- Studio Principles -->
+      <section class="mt-20 border-t border-border-subtle pt-10">
+         <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">What Guides Us</span>
+         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
+            <div>
+               <h2 class="font-serif text-2xl mb-2">Honor the ground</h2>
+               <p class="text-charcoal-muted text-sm leading-relaxed">Every project begins with the character, climate, and history of its site.</p>
+            </div>
+            <div>
+               <h2 class="font-serif text-2xl mb-2">Let materials speak</h2>
+               <p class="text-charcoal-muted text-sm leading-relaxed">We choose honest materials that reveal their making and improve with age.</p>
+            </div>
+            <div>
+               <h2 class="font-serif text-2xl mb-2">Design for the long view</h2>
+               <p class="text-charcoal-muted text-sm leading-relaxed">Durability, repair, and adaptability shape every decision we make.</p>
+            </div>
+         </div>
+      </section>
+
+      <!-- Material Palette -->
+      <section class="mt-20 border-t border-border-subtle pt-10">
+         <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Material Palette</span>
+         <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mt-6">
+            <div class="border border-border-subtle p-5 bg-surface rounded-sm">
+               <h2 class="font-serif text-xl mb-1">Rammed earth</h2>
+               <p class="text-charcoal-muted text-xs leading-relaxed">Thermal mass, drawn from the site.</p>
+            </div>
+            <div class="border border-border-subtle p-5 bg-surface rounded-sm">
+               <h2 class="font-serif text-xl mb-1">Timber</h2>
+               <p class="text-charcoal-muted text-xs leading-relaxed">Warm structure with a living grain.</p>
+            </div>
+            <div class="border border-border-subtle p-5 bg-surface rounded-sm">
+               <h2 class="font-serif text-xl mb-1">Stone</h2>
+               <p class="text-charcoal-muted text-xs leading-relaxed">Grounded, durable, and quietly exact.</p>
+            </div>
+            <div class="border border-border-subtle p-5 bg-surface rounded-sm">
+               <h2 class="font-serif text-xl mb-1">Glass</h2>
+               <p class="text-charcoal-muted text-xs leading-relaxed">A measured exchange with daylight.</p>
+            </div>
+            <div class="border border-border-subtle p-5 bg-surface rounded-sm">
+               <h2 class="font-serif text-xl mb-1">Ceramic</h2>
+               <p class="text-charcoal-muted text-xs leading-relaxed">Tactile surfaces made to endure.</p>
+            </div>
+         </div>
+      </section>
+
+      <!-- Process -->
+      <section class="mt-20 border-t border-border-subtle pt-10">
+         <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Our Process</span>
+         <div class="grid grid-cols-2 md:grid-cols-5 gap-6 mt-6">
+            <div>
+               <span class="text-xs text-charcoal-muted">01</span>
+               <h2 class="font-serif text-2xl mt-2">Listen</h2>
+            </div>
+            <div>
+               <span class="text-xs text-charcoal-muted">02</span>
+               <h2 class="font-serif text-2xl mt-2">Study</h2>
+            </div>
+            <div>
+               <span class="text-xs text-charcoal-muted">03</span>
+               <h2 class="font-serif text-2xl mt-2">Draw</h2>
+            </div>
+            <div>
+               <span class="text-xs text-charcoal-muted">04</span>
+               <h2 class="font-serif text-2xl mt-2">Build</h2>
+            </div>
+            <div>
+               <span class="text-xs text-charcoal-muted">05</span>
+               <h2 class="font-serif text-2xl mt-2">Return</h2>
+            </div>
+         </div>
+      </section>
+
+      <!-- Studio Note -->
+      <section class="mt-20 border-t border-border-subtle pt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+         <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">A Studio Note</span>
+         <p class="font-serif text-2xl md:text-3xl leading-tight md:col-span-2">
+            We believe the most lasting spaces are not imposed on a landscape, but discovered through attention to it.
+         </p>
+      </section>
+
+      <!-- Impact Metrics -->
+      <section class="mt-20 border-t border-border-subtle pt-10">
+         <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">In Practice</span>
+         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-6">
+            <div>
+               <p class="font-serif text-4xl text-terracotta">12</p>
+               <p class="text-charcoal-muted text-sm mt-1">Completed projects</p>
+            </div>
+            <div>
+               <p class="font-serif text-4xl text-terracotta">80%</p>
+               <p class="text-charcoal-muted text-sm mt-1">Local or reclaimed materials</p>
+            </div>
+            <div>
+               <p class="font-serif text-4xl text-terracotta">0</p>
+               <p class="text-charcoal-muted text-sm mt-1">Synthetic exterior cladding</p>
+            </div>
+            <div>
+               <p class="font-serif text-4xl text-terracotta">25 yr</p>
+               <p class="text-charcoal-muted text-sm mt-1">Material maintenance planning</p>
+            </div>
+         </div>
+      </section>
+
+      <!-- Closing Inquiry -->
+      <section class="mt-20 border-t border-border-subtle pt-10 pb-8">
+         <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Begin With A Conversation</span>
+         <h2 class="font-serif text-2xl md:text-3xl lg:text-4xl mt-5 mb-4">Have a build site in mind?</h2>
+         <a href="/contact.html"
+            class="inline-block bg-charcoal text-canvas px-6 py-2.5 mt-1.5 text-sm font-medium hover:bg-terracotta transition rounded-sm">
+            Reach out
+         </a>
+      </section>
    </main>
 
    <!-- Footer -->
