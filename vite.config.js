@@ -4,6 +4,11 @@ import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [tailwindcss()],
+  server: {
+    watch: {
+      ignored: ['**/src/images/**'],
+    },
+  },
   build: {
     rollupOptions: {
       input: {

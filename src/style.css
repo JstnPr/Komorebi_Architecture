@@ -68,3 +68,142 @@ html {
     rgba(231, 88, 75, 0) 82%
   );
 }
+
+.gradient-section {
+  position: relative;
+  isolation: isolate;
+}
+
+.gradient-section::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  background-repeat: no-repeat;
+}
+
+.gradient-principles::before {
+  top: -8rem;
+  right: -18rem;
+  width: min(48rem, 88vw);
+  height: 30rem;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(231, 88, 75, 0.08) 0%,
+    rgba(231, 88, 75, 0.025) 48%,
+    rgba(231, 88, 75, 0) 76%
+  );
+}
+
+.gradient-principles {
+  padding: 2rem;
+  border: 1px solid var(--color-border-subtle);
+  border-top: 3px solid var(--color-terracotta);
+  background: rgba(245, 238, 223, 0.72);
+  box-shadow: 0 1rem 2.5rem rgba(35, 33, 31, 0.06);
+}
+
+.principle-grid {
+  position: relative;
+}
+
+.studio-note-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--color-terracotta);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.studio-note-divider::before {
+  content: "";
+  width: 3rem;
+  height: 2px;
+  flex: 0 0 3rem;
+  background: var(--color-terracotta);
+}
+
+.studio-note-divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: var(--color-border-subtle);
+}
+
+.studio-note {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--color-charcoal);
+  box-shadow: 0 1.25rem 3rem rgba(35, 33, 31, 0.12);
+}
+
+.studio-note::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -12rem;
+  right: -10rem;
+  width: min(42rem, 90vw);
+  height: 38rem;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(231, 88, 75, 0.3) 0%,
+    rgba(231, 88, 75, 0.1) 42%,
+    rgba(231, 88, 75, 0) 75%
+  );
+}
+
+.studio-note-portrait {
+  min-height: 22rem;
+  border-right: 1px solid rgba(255, 249, 240, 0.18);
+}
+
+.studio-note-copy {
+  position: relative;
+}
+
+.studio-note-copy::before {
+  content: "";
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  width: 4rem;
+  height: 2px;
+  background: var(--color-terracotta);
+}
+
+@media (max-width: 767px) {
+  .gradient-principles {
+    padding: 1.5rem;
+  }
+
+  .studio-note-portrait {
+    min-height: 24rem;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 249, 240, 0.18);
+  }
+
+  .studio-note-copy::before {
+    top: 2rem;
+    right: 1.75rem;
+  }
+}
+
+.gradient-closing::before {
+  top: -13rem;
+  right: -16rem;
+  width: min(46rem, 88vw);
+  height: 34rem;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(231, 88, 75, 0.14) 0%,
+    rgba(231, 88, 75, 0.045) 42%,
+    rgba(231, 88, 75, 0) 76%
+  );
+}
