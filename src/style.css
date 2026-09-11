@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  /* Fonts */
+  --font-serif: "DM Serif Display", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+
+  /* Your Palette */
+  --color-canvas: #fff9f0;           /* Cream/Linen background */
+  --color-surface: #f5eedf;          /* Slightly deeper card surface */
+  --color-border-subtle: #ebdccb;    /* Muted hairline borders */
+  --color-charcoal: #23211f;         /* Deep dark typography */
+  --color-charcoal-muted: #6f6963;   /* Captions & subtitles */
+  --color-terracotta: #e7584b;       /* Primary CTA & accents */
+  --color-terracotta-hover: #cf483c; /* Button hover state */
+}
+
+/* Base styles */
+html {
+  background-color: var(--color-canvas);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
