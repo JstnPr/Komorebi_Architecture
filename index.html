@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Komorebi — Modern Architecture</title>
+
+   <!-- Google Fonts: DM Serif Display & DM Sans -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet">
+
+   <!-- Styles  -->
+   <link rel="stylesheet" href="/src/style.css">
+
+   <!-- Scripts -->
+   <script src="src/main.js"></script>
+</head>
+
+<body
+   class="bg-canvas text-charcoal min-h-screen flex flex-col justify-between selection:bg-terracotta selection:text-canvas">
+
+   <!-- Sticky Header -->
+   <header class="border-b border-border-subtle sticky top-0 bg-canvas/75 backdrop-blur-md z-50">
+      <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+         <a href="/index.html" class="font-serif text-2xl tracking-tight">Komorebi</a>
+
+         <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+            <a href="/about.html" class="hover:text-terracotta transition py-2 px-3">About</a>
+            <a href="/projects.html" class="hover:text-terracotta transition py-2 px-3">Projects</a>
+            <a href="/contact.html" class="hover:text-terracotta transition py-2 px-3">Contact</a>
+         </nav>
+
+         <a href="/contact.html"
+            class="bg-terracotta hover:bg-terracotta-hover text-canvas text-xs uppercase tracking-widest font-semibold px-4 py-2.5 rounded-sm transition">
+            Inquire
+         </a>
+      </div>
+   </header>
+
+   <!-- Hero Section -->
+   <main class="max-w-7xl mx-auto px-6 py-15 flex-grow">
+      <div class="max-w-4xl">
+         <span class="text-xs uppercase tracking-widest font-semibold text-charcoal-muted block mb-4">
+            Sustainable Architecture & Spatial Craft
+         </span>
+         <h1 class="font-serif text-8xl md:text-8xl lg:text-9x1 text-terracotta [1.05] tracking-tight mb-6">
+            Light
+         </h1>
+         <h2 class="font-serif text-3xl md:text-4xl lg:text-6xl leading-[1.05] tracking-tight mb-8 max-w-7xl" >
+            touches every room before we draw a single wall.
+         </h2>
+         <p class="text-charcoal-muted text-lg md:text-xl max-w-2xl leading-relaxed mb-10">
+            We create carbon-neutral residential and cultural environments balancing raw rammed earth, timber, and
+            high-performance engineering.
+         </p>
+         <div class="flex items-center gap-4">
+            <a href="/projects.html"
+               class="bg-charcoal text-canvas px-6 py-3.5 text-sm font-medium hover:bg-terracotta transition rounded-sm">
+               View Projects
+            </a>
+            <a href="/about.html"
+               class="border border-border-subtle hover:border-charcoal px-6 py-3.5 text-sm font-medium transition rounded-sm">
+               Our Philosophy
+            </a>
+         </div>
+      </div>
+
+      <!-- Featured Bento Box / Highlight -->
+      <div class="mt-20 border border-border-subtle p-8 md:p-12 bg-surface rounded-sm">
+         <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Featured Work</span>
+         <h2 class="font-serif text-3xl md:text-4xl mt-2 mb-3">The Pavilion at High Ridge</h2>
+         <p class="text-charcoal-muted max-w-xl text-sm leading-relaxed mb-6">
+            A low-impact timber and glass residence embedded directly into granite bedrock in the Pacific Northwest.
+         </p>
+         <a href="/projects.html"
+            class="text-xs uppercase tracking-widest font-semibold underline underline-offset-4 hover:text-terracotta transition">
+            Read the Case Study &rarr;
+         </a>
+      </div>
+   </main>
+
+   <!-- Footer -->
+   <footer class="border-t border-border-subtle py-8 text-center text-xs text-charcoal-muted">
+      &copy; 2026 Komorebi Studio. All rights reserved.
+   </footer>
+
+</body>
+
+</html>
