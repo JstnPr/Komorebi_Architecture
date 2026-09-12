@@ -46,6 +46,28 @@ html {
   scroll-behavior: smooth;
 }
 
+header {
+  position: relative;
+  border-bottom-color: transparent;
+}
+
+header.sticky {
+  position: sticky;
+  top: 0;
+}
+
+header::after {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 1px;
+  background: var(--color-border-subtle);
+  content: "";
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
 .hero-shell {
   position: relative;
   isolation: isolate;
@@ -58,15 +80,15 @@ html {
   top: -4rem;
   right: -10rem;
   bottom: -4rem;
-  left: -10rem;
+  left: -16rem;
   pointer-events: none;
   background:
-    radial-gradient(circle at 8% 5%, rgba(231, 88, 75, 0.14), transparent 26rem),
-    radial-gradient(circle at 32% 24%, rgba(231, 88, 75, 0.09), transparent 16rem),
-    radial-gradient(circle at 86% 18%, rgba(231, 88, 75, 0.08), transparent 20rem),
-    radial-gradient(circle at 92% 34%, rgba(231, 88, 75, 0.1), transparent 16rem),
-    radial-gradient(circle at 18% 68%, rgba(231, 88, 75, 0.08), transparent 20rem),
-    radial-gradient(circle at 84% 90%, rgba(231, 88, 75, 0.1), transparent 18rem);
+    radial-gradient(circle at 8% 5%, rgba(231, 88, 75, 0.32), transparent 26rem),
+    radial-gradient(circle at 32% 24%, rgba(231, 88, 75, 0.24), transparent 16rem),
+    radial-gradient(circle at 86% 18%, rgba(231, 88, 75, 0.22), transparent 20rem),
+    radial-gradient(circle at 92% calc(24% - 300px), rgba(231, 88, 75, 0.28), transparent 16rem),
+    radial-gradient(circle at 18% 68%, rgba(231, 88, 75, 0.22), transparent 20rem),
+    radial-gradient(circle at 84% 90%, rgba(231, 88, 75, 0.28), transparent 18rem);
 }
 
 .gradient-section {
@@ -140,10 +162,39 @@ html {
   pointer-events: none;
   background: radial-gradient(
     ellipse at center,
-    rgba(231, 88, 75, 0.3) 0%,
-    rgba(231, 88, 75, 0.1) 42%,
+    rgba(231, 88, 75, 0.45) 0%,
+    rgba(231, 88, 75, 0.16) 42%,
     rgba(231, 88, 75, 0) 75%
   );
+}
+
+.site-footer {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--color-charcoal);
+  color: var(--color-canvas);
+}
+
+.site-footer::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -12rem;
+  left: -16rem;
+  width: min(42rem, 90vw);
+  height: 38rem;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(231, 88, 75, 0.28) 0%,
+    rgba(231, 88, 75, 0.09) 42%,
+    rgba(231, 88, 75, 0) 75%
+  );
+}
+
+.site-footer-muted {
+  color: rgba(255, 249, 240, 0.65);
 }
 
 .studio-note-portrait {
@@ -166,16 +217,29 @@ html {
 }
 
 .impact-section {
+  position: relative;
   overflow: hidden;
+  padding: 0 2rem 2rem;
   border: 1px solid var(--color-border-subtle);
   border-top: 3px solid var(--color-terracotta);
-  background: rgba(245, 238, 223, 0.16);
-  box-shadow: 0 1rem 2.5rem rgba(35, 33, 31, 0.06);
+  background: transparent;
 }
 
 .impact-intro {
-  position: relative;
-  padding: 2rem 2rem 1.75rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.8fr);
+  gap: 3rem;
+  align-items: end;
+  padding: 2rem 0 2.25rem;
+}
+
+.impact-intro-copy {
+  max-width: 36rem;
+}
+
+.impact-feature {
+  padding-left: 2rem;
+  border-left: 2px solid var(--color-terracotta);
 }
 
 .impact-metrics {
@@ -184,49 +248,65 @@ html {
 }
 
 .impact-metric {
-  min-height: 9.5rem;
-  padding: 1.5rem 2rem;
+  min-height: 10rem;
+  padding: 1.5rem 2rem 1.5rem 0;
   border-right: 1px solid var(--color-border-subtle);
 }
 
-.impact-metric:nth-child(3),
-.impact-metric:nth-child(4) {
+.impact-metric + .impact-metric {
+  padding-left: 2rem;
+}
+
+.impact-metric:last-child {
+  border-right: 0;
+}
+
+.impact-landscape {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+  gap: 3rem;
+  align-items: end;
+  padding: 2rem 0 0.25rem;
   border-top: 1px solid var(--color-border-subtle);
 }
 
-.impact-metric-featured {
-  border-right: 1px solid var(--color-border-subtle);
-  border-top: 0;
-  background: transparent;
-}
-
-.impact-metric-projects {
-  border-top: 0;
-  background: transparent;
-}
-
 @media (max-width: 767px) {
-  .impact-metric-projects {
-    border-top: 1px solid var(--color-border-subtle);
+  .impact-section {
+    padding: 0 1.25rem 1.5rem;
   }
-}
 
-@media (max-width: 767px) {
   .impact-intro {
-    padding: 1.5rem;
+    display: block;
+    padding: 1.75rem 0 2rem;
+  }
+
+  .impact-feature {
+    margin-top: 2rem;
+    padding: 1.5rem 0 0 1.25rem;
   }
 
   .impact-metric {
-    min-height: 8.5rem;
-    padding: 1.25rem 1.5rem;
+    min-height: auto;
+    padding: 1.5rem 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--color-border-subtle);
   }
 
-  .impact-metric-featured {
-    border-right: 0;
+  .impact-metric:last-child {
+    border-bottom: 0;
   }
 
-  .impact-metric-projects {
-    border-right: 0;
+  .impact-metric + .impact-metric {
+    padding-left: 0;
+  }
+
+  .impact-landscape {
+    display: block;
+    padding: 2rem 0 0;
+  }
+
+  .impact-landscape > p {
+    margin-top: 1.25rem;
   }
 }
 
@@ -256,7 +336,7 @@ html {
   overflow: hidden;
   padding: 2.5rem 2rem 2.25rem;
   border: 1px solid var(--color-border-subtle);
-  border-left: 3px solid var(--color-terracotta);
+  border-top: 3px solid var(--color-terracotta);
   background: rgba(245, 238, 223, 0.12);
 }
 
