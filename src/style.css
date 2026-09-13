@@ -68,9 +68,56 @@ html {
   animation: page-out 260ms ease both;
 }
 
+.has-landing-reveals .landing-reveal {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition:
+    opacity 850ms ease,
+    transform 850ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.has-landing-reveals .landing-reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.has-landing-reveals .landing-reveal-hero-title {
+  transition-delay: 100ms;
+}
+
+.has-landing-reveals .landing-reveal-hero-support {
+  transition-delay: 280ms;
+}
+
+.has-landing-reveals .landing-reveal-hero-description {
+  transition-delay: 460ms;
+}
+
+.has-landing-reveals .landing-reveal-hero-actions {
+  transition-delay: 640ms;
+}
+
+.has-landing-reveals .landing-reveal-featured {
+  transition-delay: 850ms;
+}
+
+.has-landing-reveals .landing-reveal-section {
+  transform: translateX(-1.5rem);
+}
+
+.has-landing-reveals .landing-reveal-section.is-revealed {
+  transform: translateX(0);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .js-page-transitions body {
     animation: none;
+  }
+
+  .has-landing-reveals .landing-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
 
