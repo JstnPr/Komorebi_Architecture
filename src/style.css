@@ -44,6 +44,51 @@ html {
   color: var(--color-charcoal);
   font-family: var(--font-sans);
   scroll-behavior: smooth;
+  scrollbar-color: var(--color-terracotta) transparent;
+}
+
+@keyframes page-out {
+  to {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+  }
+}
+
+.js-page-transitions body {
+  animation: page-in 360ms ease both;
+}
+
+.js-page-transitions.is-leaving body {
+  animation: page-out 260ms ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js-page-transitions body {
+    animation: none;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-terracotta);
+  outline-offset: 3px;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-terracotta);
 }
 
 header {
@@ -68,6 +113,10 @@ header::after {
   pointer-events: none;
 }
 
+.header-no-border::after {
+  display: none;
+}
+
 .hero-shell {
   position: relative;
   isolation: isolate;
@@ -78,9 +127,9 @@ header::after {
   position: absolute;
   z-index: -1;
   top: -4rem;
-  right: -10rem;
+  right: 0;
   bottom: -4rem;
-  left: -16rem;
+  left: 0;
   pointer-events: none;
   background:
     radial-gradient(circle at 8% 5%, rgba(231, 88, 75, 0.32), transparent 26rem),
@@ -89,6 +138,66 @@ header::after {
     radial-gradient(circle at 92% calc(24% - 300px), rgba(231, 88, 75, 0.28), transparent 16rem),
     radial-gradient(circle at 18% 68%, rgba(231, 88, 75, 0.22), transparent 20rem),
     radial-gradient(circle at 84% 90%, rgba(231, 88, 75, 0.28), transparent 18rem);
+}
+
+@media (min-width: 1600px) {
+  .max-w-7xl {
+    width: min(84vw, 140rem);
+    max-width: none;
+  }
+
+  .hero-shell {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+
+  .hero-shell::before {
+    top: -8rem;
+    right: -18vw;
+    bottom: -8rem;
+    left: -18vw;
+  }
+
+  .hero-shell > div:first-child {
+    max-width: 68rem;
+  }
+
+  .hero-shell > article,
+  .hero-shell > section,
+  .hero-shell > .studio-note-divider,
+  .hero-shell > .studio-note {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 767px) and (max-height: 600px) {
+  .hero-description {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 340px) and (max-height: 600px) {
+  .hero-actions {
+    gap: 0.5rem;
+  }
+
+  .hero-actions a {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    font-size: 0.875rem;
+    white-space: nowrap;
+  }
+
+  .inquiry-link {
+    gap: 0.5rem;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
 }
 
 .gradient-section {
@@ -195,6 +304,15 @@ header::after {
 
 .site-footer-muted {
   color: rgba(255, 249, 240, 0.65);
+}
+
+@media (max-width: 767px) {
+  .site-footer::after {
+    top: -7rem;
+    left: -7rem;
+    width: 26rem;
+    height: 26rem;
+  }
 }
 
 .studio-note-portrait {

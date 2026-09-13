@@ -8,14 +8,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/src/style.css">
+  <script type="module" src="/src/main.js"></script>
 </head>
 <body class="bg-canvas text-charcoal min-h-screen flex flex-col justify-between selection:bg-terracotta selection:text-canvas">
 
-  <header class="border-b border-border-subtle sticky top-0 bg-canvas/25 backdrop-blur-sm z-50">
+  <header class="header-no-border sticky top-0 bg-canvas/25 backdrop-blur-sm z-50">
     <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-      <a href="/index.html" class="flex items-center gap-2 tracking-tight">
-        <span class="font-serif text-2xl">Komorebi</span>
-        <span class="font-sans text-xs font-normal mx-1 tracking-[0.12em] text-charcoal-muted">architecture</span>
+      <a href="/index.html" class="flex flex-col items-center gap-0 tracking-tight md:flex-row md:items-center md:gap-2">
+        <span class="font-serif text-xl md:text-2xl">Komorebi</span>
+        <span class="font-sans text-[0.6rem] font-normal md:mx-1 tracking-[0.12em] text-charcoal-muted md:inline">architecture</span>
       </a>
 
       <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
@@ -26,7 +27,7 @@
       </nav>
 
       <a href="/contact.html"
-        class="bg-terracotta hover:bg-terracotta-hover text-canvas text-xs uppercase tracking-widest font-semibold px-4 py-2.5 rounded-sm transition">
+        class="bg-terracotta hover:bg-terracotta-hover text-canvas text-xs uppercase tracking-widest font-semibold px-3 py-2 md:px-4 md:py-2.5 rounded-sm transition">
         Inquire
       </a>
     </div>

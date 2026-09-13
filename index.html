@@ -17,18 +17,18 @@
    <link rel="stylesheet" href="/src/style.css">
 
    <!-- Scripts -->
-   <script src="src/main.js"></script>
+   <script type="module" src="/src/main.js"></script>
 </head>
 
 <body
    class="bg-canvas text-charcoal min-h-screen flex flex-col justify-between selection:bg-terracotta selection:text-canvas">
 
    <!-- Sticky Header -->
-   <header class="border-b border-border-subtle sticky top-0 bg-canvas/25 backdrop-blur-sm z-50">
+   <header class="header-no-border sticky top-0 bg-canvas/25 backdrop-blur-sm z-50">
       <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-         <a href="/index.html" class="flex items-center gap-2 tracking-tight">
-            <span class="font-serif text-2xl">Komorebi</span>
-            <span class="font-sans text-xs font-normal mx-1 tracking-[0.12em] text-charcoal-muted">architecture</span>
+         <a href="/index.html" class="flex flex-col items-center gap-0 tracking-tight md:flex-row md:items-center md:gap-2">
+            <span class="font-serif text-xl md:text-2xl">Komorebi</span>
+            <span class="font-sans text-[0.6rem] font-normal md:mx-1 tracking-[0.12em] text-charcoal-muted md:inline">architecture</span>
          </a>
 
          <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
@@ -39,7 +39,7 @@
          </nav>
 
          <a href="/contact.html"
-            class="bg-terracotta hover:bg-terracotta-hover text-canvas text-xs uppercase tracking-widest font-semibold px-4 py-2.5 rounded-sm transition">
+            class="bg-terracotta hover:bg-terracotta-hover text-canvas text-xs uppercase tracking-widest font-semibold px-3 py-2 md:px-4 md:py-2.5 rounded-sm transition">
             Inquire
          </a>
       </div>
@@ -54,10 +54,10 @@
          <h2 class="font-serif text-3xl md:text-4xl lg:text-6xl leading-[1.05] tracking-tight mb-8 max-w-7xl" >
             touches every room before we draw a single line.
          </h2>
-         <p class="text-charcoal-muted text-lg md:text-xl max-w-xl leading-relaxed mb-10">
+         <p class="hero-description text-charcoal-muted text-lg md:text-xl max-w-xl leading-relaxed mb-10">
             We create carbon-neutral spaces with sustainable materials and high-performance engineering.
          </p>
-         <div class="flex items-center gap-4">
+         <div class="hero-actions flex items-center gap-4">
             <a href="/projects.html"
                class="bg-charcoal text-canvas px-6 py-2.5 text-sm font-medium hover:bg-terracotta transition rounded-sm">
                View Projects
@@ -214,7 +214,7 @@
          </div>
          <a href="/contact.html"
             class="inquiry-link inline-flex items-center justify-center gap-4 bg-terracotta px-5 py-3.5 text-xs uppercase tracking-widest text-canvas font-semibold hover:bg-charcoal transition rounded-sm group">
-            <span>Start a conversation</span>
+            <span>Discuss the first line</span>
             <span aria-hidden="true" class="text-lg leading-none transition group-hover:translate-x-1">&rarr;</span>
          </a>
       </section>
