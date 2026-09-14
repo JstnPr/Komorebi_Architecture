@@ -1,9 +1,9 @@
-import redRockRetreatImage from './images/projects/Red-Rock.jpeg';
-import pavilionImage from './images/projects/Pavilion.jpeg';
-import houseOfLightImage from './images/projects/House-of-Light.jpeg';
-import mesaAnnexImage from './images/projects/Mesa-Annex.jpeg';
-import lakeglassImage from './images/projects/Lakeglass.jpeg';
-import courtyardHouseImage from './images/projects/Courtyard.jpeg';
+import redRockRetreatImage from './images/projects/Red-Rock.avif';
+import pavilionImage from './images/projects/Pavilion.avif';
+import houseOfLightImage from './images/projects/House-of-Light.avif';
+import mesaAnnexImage from './images/projects/Mesa-Annex.avif';
+import lakeglassImage from './images/projects/Lakeglass.avif';
+import courtyardHouseImage from './images/projects/Courtyard.avif';
 
 export const projects = [
   {
