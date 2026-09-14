@@ -41,41 +41,12 @@
       <span>Komorebi in Practice</span>
     </div>
     
-    <div class="projects-grid grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
-      <article id="pavilion-high-ridge" class="project-card border border-border-subtle bg-transparent rounded-sm overflow-hidden">
-        <figure class="project-card-image">
-          <img src="/src/images/Pavilion.jpeg" alt="The Pavilion at High Ridge nestled into a wooded hillside" class="h-full w-full object-cover" loading="lazy">
-          <figcaption class="absolute bottom-4 left-4 text-[0.65rem] uppercase tracking-widest text-canvas font-semibold">High Ridge / 2026</figcaption>
-        </figure>
-        <div class="project-card-content">
-          <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Residential</span>
-          <h2 class="font-serif text-2xl md:text-3xl leading-tight mt-3 mb-3">The Pavilion at High Ridge</h2>
-          <p class="text-charcoal-muted text-sm leading-relaxed">A low-impact pavilion shaped around a wooded hillside, where framed views and quiet transitions between inside and out make the landscape the central room.</p>
-          <a href="#pavilion-high-ridge" class="project-card-link inline-flex items-center gap-3 self-start mt-6 text-[0.65rem] uppercase tracking-widest font-semibold group">
-            <span class="border-b border-charcoal pb-1 group-hover:border-terracotta group-hover:text-terracotta">Read the Case Study</span>
-            <span aria-hidden="true" class="text-lg leading-none group-hover:text-terracotta">&rarr;</span>
-          </a>
-        </div>
-      </article>
-      <article id="atelier-verde" class="project-card border border-border-subtle bg-transparent rounded-sm overflow-hidden">
-        <figure class="project-card-image">
-          <img src="/src/images/Pavilion.jpeg" alt="The Pavilion landscape and material palette" class="h-full w-full object-cover" loading="lazy">
-          <figcaption class="absolute bottom-4 left-4 text-[0.65rem] uppercase tracking-widest text-canvas font-semibold">Material Study / 2026</figcaption>
-        </figure>
-        <div class="project-card-content">
-          <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Commercial</span>
-          <h2 class="font-serif text-2xl md:text-3xl leading-tight mt-3 mb-3">Atelier Verde</h2>
-          <p class="text-charcoal-muted text-sm leading-relaxed">A high-efficiency glasshouse and ceramic studio organized around solar heat banking, shared work, and a garden that brings the production of the building into view.</p>
-          <a href="#atelier-verde" class="project-card-link inline-flex items-center gap-3 self-start mt-6 text-[0.65rem] uppercase tracking-widest font-semibold group">
-            <span class="border-b border-charcoal pb-1 group-hover:border-terracotta group-hover:text-terracotta">Read the Case Study</span>
-            <span aria-hidden="true" class="text-lg leading-none group-hover:text-terracotta">&rarr;</span>
-          </a>
-        </div>
-      </article>
-    </div>
+    <div id="projects-grid" class="projects-grid grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6"></div>
   </main>
 
-  <footer class="site-footer border-t border-canvas/20 mt-20">
+  <script type="module" src="/src/projects-renderer.js"></script>
+
+  <footer class="site-footer border-t border-canvas/20 mt-12">
     <div class="max-w-7xl mx-auto px-6 md:px-12 py-12">
       <div class="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
         <div>
