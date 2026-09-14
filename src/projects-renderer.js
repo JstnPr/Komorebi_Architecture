@@ -4,7 +4,7 @@ const projectsGrid = document.querySelector('#projects-grid');
 
 if (projectsGrid) {
   projectsGrid.innerHTML = projects.map((project) => `
-    <article id="${project.id}" class="project-card border border-border-subtle bg-transparent rounded-sm overflow-hidden">
+    <article id="${project.id}" class="project-card project-card-${project.id} border border-border-subtle bg-transparent rounded-sm overflow-hidden">
       <figure class="project-card-image">
         <img src="${project.image}" alt="${project.alt}" class="h-full w-full object-cover" loading="lazy">
         <figcaption class="absolute bottom-4 left-4 text-[0.65rem] uppercase tracking-widest text-canvas font-semibold">${project.place} / ${project.year}</figcaption>

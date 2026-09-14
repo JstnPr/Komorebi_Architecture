@@ -755,6 +755,12 @@ header::after {
   padding: 1.5rem;
 }
 
+@media (min-width: 768px) {
+  .project-card-red-rock-retreat .project-card-image img {
+    object-position: right center;
+  }
+}
+
 @media (max-width: 767px) {
   .project-card {
     display: block;
