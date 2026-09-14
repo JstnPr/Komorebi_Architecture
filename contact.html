@@ -31,12 +31,29 @@
             <a href="/contact.html" class="text-terracotta font-semibold py-2 px-3">Contact</a>
          </nav>
 
+         <button type="button" class="mobile-nav-toggle md:hidden" data-mobile-nav-toggle aria-expanded="false" aria-controls="mobile-nav">
+            <span class="mobile-nav-toggle-icon" aria-hidden="true"></span>
+            <span>Menu</span>
+         </button>
+
          <a href="/contact.html"
-            class="bg-terracotta hover:bg-terracotta-hover text-canvas text-xs tracking-widest font-semibold px-3 py-2 md:px-4 md:py-2.5 rounded-sm">
+            class="header-inquiry bg-terracotta hover:bg-terracotta-hover text-canvas text-xs tracking-widest font-semibold px-3 py-2 md:px-4 md:py-2.5 rounded-sm">
             Inquire
          </a>
       </div>
+
+      <div id="mobile-nav" class="mobile-nav-panel" data-mobile-nav hidden>
+         <nav aria-label="Mobile navigation">
+            <a href="/index.html">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/projects.html">Projects</a>
+            <a href="/contact.html" aria-current="page">Contact</a>
+            <a href="/contact.html" class="mobile-nav-contact">Start a conversation &rarr;</a>
+         </nav>
+      </div>
    </header>
+
+   <script type="module" src="/src/mobile-nav.js"></script>
 
    <main class="contact-shell max-w-7xl mx-auto px-6 py-12 md:py-16 flex-grow w-full">
       <section class="contact-intro">
