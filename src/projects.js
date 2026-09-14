@@ -1,3 +1,10 @@
+import redRockRetreatImage from './images/projects/Red-Rock.jpeg';
+import pavilionImage from './images/projects/Pavilion.jpeg';
+import houseOfLightImage from './images/projects/House-of-Light.jpeg';
+import mesaAnnexImage from './images/projects/Mesa-Annex.jpeg';
+import lakeglassImage from './images/projects/Lakeglass.jpeg';
+import courtyardHouseImage from './images/projects/Courtyard.jpeg';
+
 export const projects = [
   {
     id: 'red-rock-retreat',
@@ -6,7 +13,7 @@ export const projects = [
     year: '2026',
     category: 'Residential',
     name: 'Red Rock Retreat',
-    image: '/src/images/projects/Red-Rock.jpeg',
+    image: redRockRetreatImage,
     alt: 'A contemporary desert retreat beside red sandstone cliffs near Moab',
     description: 'A quiet retreat of board-formed concrete, weathered steel, and warm timber, carefully embedded in the red-rock landscape with deep shade and framed desert views.',
   },
@@ -17,7 +24,7 @@ export const projects = [
     year: '2026',
     category: 'Residential',
     name: 'The Pavilion at High Ridge',
-    image: '/src/images/projects/Pavilion.jpeg',
+    image: pavilionImage,
     alt: 'The Pavilion at High Ridge nestled into a wooded hillside',
     description: 'A low-impact pavilion shaped around a wooded hillside, where framed views and quiet transitions between inside and out make the landscape the central room.',
   },
@@ -28,7 +35,7 @@ export const projects = [
     year: '2024',
     category: 'Residential',
     name: 'House of Light',
-    image: '/src/images/projects/House-of-Light.jpeg',
+    image: houseOfLightImage,
     alt: 'A contemporary hillside residence surrounded by terraced planting in Santa Barbara',
     description: 'A hillside residence shaped by mineral walls, recessed openings, and terraced gardens of olive, lavender, and rosemary that soften the architecture into its coastal setting.',
   },
@@ -39,7 +46,7 @@ export const projects = [
     year: '2022',
     category: 'Cultural',
     name: 'Mesa Arts Annex',
-    image: '/src/images/projects/Mesa-Annex.jpeg',
+    image: mesaAnnexImage,
     alt: 'A contemporary rammed-earth arts annex in Phoenix',
     description: 'A small arts center of rammed earth, concrete, and perforated shade screens, arranged around a cool courtyard that makes desert climate part of the experience.',
   },
@@ -50,7 +57,7 @@ export const projects = [
     year: '2020',
     category: 'Residential',
     name: 'Lakeglass Cabin',
-    image: '/src/images/projects/Lakeglass.jpeg',
+    image: lakeglassImage,
     alt: 'A contemporary timber cabin beside a lake in Traverse City',
     description: 'A compact timber and steel retreat that opens toward the lake while holding close to the birch and maple forest around it.',
   },
@@ -61,7 +68,7 @@ export const projects = [
     year: '2018',
     category: 'Residential',
     name: 'Courtyard House',
-    image: '/src/images/projects/Courtyard.jpeg',
+    image: courtyardHouseImage,
     alt: 'A contemporary courtyard house surrounded by moss and maple planting in Portland',
     description: 'A quiet modern house organized around a moss garden, where dark timber, pale plaster, and carefully framed openings bring the changing light of the Pacific Northwest indoors.',
   },
