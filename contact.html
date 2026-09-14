@@ -19,7 +19,7 @@
 
    <header class="header-no-border sticky top-0 bg-canvas/25 backdrop-blur-sm z-50">
       <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-         <a href="/index.html" class="flex flex-col items-center gap-0 tracking-tight md:flex-row md:items-center md:gap-2">
+         <a href="/index.html" class="mobile-nav-brand flex flex-col items-center gap-0 tracking-tight md:flex-row md:items-center md:gap-2">
             <span class="font-serif text-xl md:text-2xl">Komorebi</span>
             <span class="header-subtitle font-sans text-[0.6rem] font-normal md:mx-1 tracking-[0.12em] md:inline">architecture</span>
          </a>
@@ -28,30 +28,50 @@
             <a href="/index.html" class="hover:text-terracotta py-2 px-3">Home</a>
             <a href="/about.html" class="hover:text-terracotta py-2 px-3">About</a>
             <a href="/projects.html" class="hover:text-terracotta py-2 px-3">Projects</a>
-            <a href="/contact.html" class="text-terracotta font-semibold py-2 px-3">Contact</a>
+            <a href="/contact.html" class="text-terracotta font-semibold py-2 px-3" aria-current="page">Contact</a>
          </nav>
 
-         <button type="button" class="mobile-nav-toggle md:hidden" data-mobile-nav-toggle aria-expanded="false" aria-controls="mobile-nav">
-            <span class="mobile-nav-toggle-icon" aria-hidden="true"></span>
-            <span>Menu</span>
-         </button>
+         <div class="header-actions flex items-center gap-6">
+            <button type="button" class="mobile-nav-toggle md:hidden" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-navigation">
+               <svg class="mobile-nav-toggle-open" width="28" height="28" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" aria-hidden="true">
+                  <path d="M5 9h20"></path>
+                  <path d="M5 15h20"></path>
+                  <path d="M5 21h20"></path>
+               </svg>
+               <svg class="mobile-nav-toggle-close" width="28" height="28" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" aria-hidden="true">
+                  <path d="M7 7L23 23"></path>
+                  <path d="M23 7L7 23"></path>
+               </svg>
+            </button>
 
-         <a href="/contact.html"
-            class="header-inquiry bg-terracotta hover:bg-terracotta-hover text-canvas text-xs tracking-widest font-semibold px-3 py-2 md:px-4 md:py-2.5 rounded-sm">
-            Inquire
+            <a href="/contact.html"
+               class="header-inquiry bg-terracotta hover:bg-terracotta-hover text-canvas text-xs tracking-widest font-semibold px-3 py-2 md:px-4 md:py-2.5 rounded-sm">
+               Inquire
+            </a>
+         </div>
+      </div>
+
+   </header>
+
+   <button type="button" class="mobile-nav-backdrop" aria-label="Close navigation"></button>
+   <aside id="mobile-navigation" class="mobile-nav-drawer" aria-label="Mobile navigation" aria-hidden="true" inert>
+      <div class="mobile-nav-drawer-inner">
+         <div class="mobile-nav-drawer-heading">
+            <span>Explore</span>
+            <span aria-hidden="true">01-04</span>
+         </div>
+         <nav class="mobile-nav-links" aria-label="Primary navigation">
+            <a href="/index.html"><span>01</span><span>Home</span></a>
+            <a href="/about.html"><span>02</span><span>About</span></a>
+            <a href="/projects.html"><span>03</span><span>Projects</span></a>
+            <a href="/contact.html" aria-current="page"><span>04</span><span>Contact</span></a>
+         </nav>
+         <a href="/contact.html" class="mobile-nav-drawer-inquiry">
+            <span>Start a conversation</span>
+            <span aria-hidden="true">&rarr;</span>
          </a>
       </div>
-
-      <div id="mobile-nav" class="mobile-nav-panel" data-mobile-nav hidden>
-         <nav aria-label="Mobile navigation">
-            <a href="/index.html">Home</a>
-            <a href="/about.html">About</a>
-            <a href="/projects.html">Projects</a>
-            <a href="/contact.html" aria-current="page">Contact</a>
-            <a href="/contact.html" class="mobile-nav-contact">Start a conversation &rarr;</a>
-         </nav>
-      </div>
-   </header>
+   </aside>
 
    <script type="module" src="/src/mobile-nav.js"></script>
 
