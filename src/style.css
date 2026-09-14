@@ -1201,6 +1201,82 @@ header::after {
   line-height: 1.45;
 }
 
+.confirmation-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: min(30rem, calc(100% - 2rem));
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--color-border-subtle);
+  border-top: 3px solid var(--color-terracotta);
+  background: var(--color-canvas);
+  color: var(--color-charcoal);
+  box-shadow: 0 1.5rem 4rem rgba(35, 33, 31, 0.2);
+  transform: translate(-50%, -50%);
+}
+
+.confirmation-dialog::backdrop {
+  background: rgba(35, 33, 31, 0.42);
+}
+
+.confirmation-dialog-inner {
+  padding: 2.25rem;
+}
+
+.confirmation-dialog-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--color-terracotta);
+  border-radius: 50%;
+  color: var(--color-terracotta);
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.confirmation-dialog-kicker {
+  margin-bottom: 0.75rem;
+  color: var(--color-terracotta);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.confirmation-dialog-copy {
+  max-width: 24rem;
+  margin-top: 1rem;
+  color: var(--color-charcoal-muted);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.confirmation-dialog-close {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+  padding: 0.7rem 1rem;
+  border: 0;
+  border-radius: 0.125rem;
+  background: var(--color-terracotta);
+  color: var(--color-canvas);
+  font: inherit;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.confirmation-dialog-close:hover {
+  background: var(--color-terracotta-hover);
+}
+
 .contact-meta {
   display: flex;
   justify-content: center;
@@ -1251,6 +1327,10 @@ header::after {
 
   .contact-form-panel {
     padding: 1.5rem 1.5rem 1rem;
+  }
+
+  .confirmation-dialog-inner {
+    padding: 1.75rem;
   }
 
   .contact-meta {

@@ -156,6 +156,16 @@
             </form>
          </div>
 
+         <dialog id="confirmation-dialog" class="confirmation-dialog" aria-labelledby="confirmation-title">
+            <div class="confirmation-dialog-inner">
+               <div class="confirmation-dialog-mark" aria-hidden="true">&#10003;</div>
+               <p class="confirmation-dialog-kicker">Inquiry received</p>
+               <h2 id="confirmation-title" class="font-serif text-3xl leading-none">Thank you for reaching out.</h2>
+               <p class="confirmation-dialog-copy">Your inquiry is with the studio. We will be in touch within two business days.</p>
+               <button id="confirmation-close" type="button" class="confirmation-dialog-close">Close <span aria-hidden="true">&rarr;</span></button>
+            </div>
+         </dialog>
+
          <dl class="contact-meta contact-meta-under-form">
             <div>
                <dt>Email</dt>

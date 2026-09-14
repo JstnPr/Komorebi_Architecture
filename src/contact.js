@@ -1,7 +1,11 @@
 const form = document.querySelector('#contact-form');
 const status = document.querySelector('#form-status');
+const confirmationDialog = document.querySelector('#confirmation-dialog');
+const confirmationClose = document.querySelector('#confirmation-close');
 
-if (form && status) {
+if (form && status && confirmationDialog && confirmationClose) {
+  let lastFocusedElement = null;
+
   const requiredFields = [
     { input: form.elements.name, error: document.querySelector('#name-error'), message: 'Please tell us your name.' },
     { input: form.elements.email, error: document.querySelector('#email-error'), message: 'Please enter a valid email address.' },
@@ -32,7 +36,24 @@ if (form && status) {
 
     form.reset();
     requiredFields.forEach(({ input }) => input.removeAttribute('aria-invalid'));
-    status.textContent = 'Thank you. Your inquiry is with the studio, and we will be in touch within two business days.';
-    status.className = 'form-status form-status-success';
+    status.textContent = '';
+    status.className = 'form-status';
+    lastFocusedElement = document.activeElement;
+    confirmationDialog.showModal();
+    confirmationClose.focus();
+  });
+
+  const closeConfirmation = () => {
+    confirmationDialog.close();
+  };
+
+  confirmationClose.addEventListener('click', closeConfirmation);
+  confirmationDialog.addEventListener('close', () => {
+    lastFocusedElement?.focus();
+  });
+  confirmationDialog.addEventListener('click', (event) => {
+    if (event.target === confirmationDialog) {
+      closeConfirmation();
+    }
   });
 }
