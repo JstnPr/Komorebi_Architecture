@@ -736,6 +736,46 @@ header::after {
   margin-left: auto;
 }
 
+.project-card {
+  display: grid;
+  grid-template-columns: minmax(9rem, 1fr) minmax(0, 1.35fr);
+  min-height: 13rem;
+  box-shadow: 0 0.5rem 1.25rem rgba(35, 33, 31, 0.04);
+}
+
+.project-card-image {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--color-charcoal);
+}
+
+.project-card-content {
+  align-self: center;
+  padding: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  .project-card {
+    display: block;
+    min-height: 0;
+  }
+
+  .project-card-image {
+    aspect-ratio: 16 / 8;
+  }
+
+  .project-card-content {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .project-card-content {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+}
+
 .contact-intro {
   max-width: none;
 }
