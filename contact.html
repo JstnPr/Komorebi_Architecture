@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap"
       rel="stylesheet">
    <link rel="stylesheet" href="/src/style.css">
+   <script type="module" src="/src/contact.js"></script>
 </head>
 
 <body
@@ -37,34 +38,105 @@
       </div>
    </header>
 
-   <main class="max-w-2xl mx-auto px-6 py-20 flex-grow w-full">
-      <h1 class="font-serif text-5xl mb-3">Start a Project</h1>
-      <p class="text-charcoal-muted mb-8 text-sm">Tell us about your site, your timeline, and your vision.</p>
+   <main class="contact-shell max-w-7xl mx-auto px-6 py-12 md:py-16 flex-grow w-full">
+      <section class="contact-intro">
+         <div>
+            <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Begin With A Conversation</span>
+            <h1 class="font-serif text-4xl md:text-5xl leading-none mt-3 mb-4">Start a Project</h1>
+            <p class="text-charcoal-muted text-sm md:text-base leading-relaxed max-w-xl">Tell us about the place, the questions, and the way you want to live. We will start by listening.</p>
+            <p class="contact-expectation">We review every inquiry personally and reply within two business days.</p>
+         </div>
+      </section>
 
-      <form class="space-y-6">
-         <div>
-            <label class="block text-xs uppercase tracking-widest font-semibold mb-2">Name</label>
-            <input type="text"
-               class="w-full bg-transparent border border-border-subtle p-3 rounded-sm focus:outline-none focus:border-terracotta" />
+      <section class="contact-layout mt-10 md:mt-12">
+         <div class="contact-form-panel">
+         <form id="contact-form" class="space-y-5" novalidate>
+               <div class="contact-field-grid">
+                  <div>
+                     <label for="name">Name <span aria-hidden="true">*</span></label>
+                     <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+                     <p id="name-error" class="field-error" role="alert"></p>
+                  </div>
+                  <div>
+                     <label for="email">Email <span aria-hidden="true">*</span></label>
+                     <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+                     <p id="email-error" class="field-error" role="alert"></p>
+                  </div>
+               </div>
+
+               <div class="contact-field-grid">
+                  <div>
+                     <label for="project-type">Project type</label>
+                     <select id="project-type" name="project-type">
+                        <option value="">Select one</option>
+                        <option>New residence</option>
+                        <option>Renovation or addition</option>
+                        <option>Commercial or cultural</option>
+                        <option>Not sure yet</option>
+                     </select>
+                  </div>
+                  <div>
+                     <label for="location">Project location</label>
+                     <input id="location" name="location" type="text" autocomplete="address-level2" placeholder="City, State">
+                  </div>
+               </div>
+
+               <div class="contact-field-grid">
+                  <div>
+                     <label for="timeline">Desired timeline</label>
+                     <select id="timeline" name="timeline">
+                        <option value="">Select one</option>
+                        <option>Exploring possibilities</option>
+                        <option>Planning within 12 months</option>
+                        <option>Ready to begin</option>
+                     </select>
+                  </div>
+                  <div>
+                     <label for="budget">Approximate budget</label>
+                     <select id="budget" name="budget">
+                        <option value="">Select one</option>
+                        <option>Under $500k</option>
+                        <option>$500k-$1m</option>
+                        <option>$1m-$2m</option>
+                        <option>Over $2m</option>
+                        <option>Not sure yet</option>
+                     </select>
+                  </div>
+               </div>
+
+               <div>
+                  <label for="brief">Project brief <span aria-hidden="true">*</span></label>
+                  <textarea id="brief" name="brief" rows="6" required placeholder="What are you hoping to make, keep, or change?" aria-describedby="brief-hint brief-error"></textarea>
+                  <p id="brief-hint" class="field-hint">A few sentences about the site, the project, or the question you are carrying.</p>
+                  <p id="brief-error" class="field-error" role="alert"></p>
+               </div>
+
+               <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                  <p class="text-xs text-charcoal-muted max-w-xs">By sending this form, you agree that we may use your details to respond to your inquiry.</p>
+                  <button type="submit" class="bg-terracotta hover:bg-terracotta-hover text-canvas px-6 py-2.5 text-[0.7rem] uppercase tracking-widest font-semibold rounded-sm">Send Inquiry <span aria-hidden="true">&rarr;</span></button>
+               </div>
+               <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+            </form>
          </div>
-         <div>
-            <label class="block text-xs uppercase tracking-widest font-semibold mb-2">Email</label>
-            <input type="email"
-               class="w-full bg-transparent border border-border-subtle p-3 rounded-sm focus:outline-none focus:border-terracotta" />
-         </div>
-         <div>
-            <label class="block text-xs uppercase tracking-widest font-semibold mb-2">Project Brief</label>
-            <textarea rows="4"
-               class="w-full bg-transparent border border-border-subtle p-3 rounded-sm focus:outline-none focus:border-terracotta"></textarea>
-         </div>
-         <button type="submit"
-            class="bg-terracotta hover:bg-terracotta-hover text-canvas px-8 py-3.5 text-xs uppercase tracking-widest font-semibold rounded-sm">
-            Send Inquiry
-         </button>
-      </form>
+
+         <dl class="contact-meta contact-meta-under-form">
+            <div>
+               <dt>Email</dt>
+               <dd><a href="mailto:hello@komorebi.studio">hello@komorebi.studio</a></dd>
+            </div>
+            <div>
+               <dt>Studio</dt>
+               <dd>814 Mosslight Way<br>Portland, Oregon 97209</dd>
+            </div>
+            <div>
+               <dt>Hours</dt>
+               <dd>Monday-Friday<br>9:00am-5:00pm Pacific</dd>
+            </div>
+         </dl>
+      </section>
    </main>
 
-   <footer class="site-footer border-t border-canvas/20 mt-20">
+   <footer class="site-footer border-t border-canvas/20 mt-12">
       <div class="max-w-7xl mx-auto px-6 md:px-12 py-12">
          <div class="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
             <div>
