@@ -38,7 +38,7 @@ JstnPr
 
 Komorebi Architecture is a fictional concept created for an educational project. This website is not affiliated with a real architecture firm.
 
-All imagery featured on this website was generated using NBP for this educational project.
+All imagery featured on this website was generated using Google's Nano Banana Pro for this educational project.
 
 ## License
 
